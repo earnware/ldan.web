@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ldan.io</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'>
+	<link href="jspm_packages/github/twbs/bootstrap@3.3.6/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="jspm_packages/npm/font-awesome@4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href='src/assets/styles/sb-admin.css' rel='stylesheet' type='text/css'>
+	<link href='src/assets/styles/styles.css' rel='stylesheet' type='text/css'>	
+	
+  </head>
+
+  <body aurelia-app="configuration/dev.js">
+	<div class="splash processing-container">
+		<div class="centered processing-block">
+			<h1 class="text-center login-logo">
+				<span>ldan.io</span> 
+				<i class="processing-icon fa fa-refresh fa-spin"></i>
+			</h1>
+			<div class="processing-message text-center">Processing...</div>
+		</div>
+	</div>	
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+		System.import('aurelia-bootstrapper');
+    </script>
+  </body>
+</html>

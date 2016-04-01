@@ -1,0 +1,39 @@
+{
+  "bundles": {
+    "dist/app-build": {
+      "includes": [
+		"[*/**/*.js]",
+		"[*.js]",
+		"*/**/*.html!text",
+		"*.html!text",
+		"assets/styles/*.css!text",		  
+        "aurelia-framework",
+        "aurelia-bootstrapper",
+        "aurelia-http-client",
+        "aurelia-router",
+        "aurelia-animator-css",
+        "aurelia-templating-binding",
+        "aurelia-templating-resources",
+        "aurelia-templating-router",
+        "aurelia-loader-default",
+        "aurelia-history-browser",
+        "aurelia-logging-console",
+		"aurelia-validation",
+		"aurelia-validation/resources/en-US.js",
+        "bootstrap",
+        "bootstrap/css/bootstrap.css!text",
+		"bootstrap-social/bootstrap-social.css!text",	
+		"chart",	
+		"font-awesome",
+		"font-awesome/css/font-awesome.css!text",
+		"hellojs",
+		"text"
+      ],
+      "options": {
+        "inject": true,
+        "minify": true,
+        "rev": true
+      }
+    }
+  }
+}

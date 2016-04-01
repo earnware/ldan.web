@@ -1,0 +1,44 @@
+<template>
+	<require from="../converters/route-menu-filter"></require>
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/"><h1 class="text-center admin-logo"><span>ldan.io</span> <i class="admin-logo fa fa-cog fa-spin"></i></h1></a>
+		</div>
+
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul if.bind="state.user" class="nav navbar-nav side-nav">
+				<li>
+					<a href="javascript:;" data-toggle="collapse" data-target="#user">
+						<img if.bind="state.user.thumbnail" src="${state.user.thumbnail}" alt="${state.user.firstName} ${state.user.lastName}" class="fa fa-fw fa-2x img-circle"/>
+						<i if.bind="!state.user.thumbnail" class="fa fa-fw fa-user fa-2x"></i>
+						${state.user.firstName} ${state.user.lastName}							
+						<i class="fa fa-fw fa-caret-down"></i>
+					</a>
+					<ul id="user" class="collapse">
+						<li repeat.for="row of router.navigation | routeMenuFilter:'user'" class="${row.isActive ? 'active' : ''}">
+							<a href.bind="row.href">${row.title}</a>
+						</li>
+						<li>
+							<a href="#" click.trigger="triggerSignOutRequest()"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+						</li>
+					</ul>
+				</li>	
+				<li repeat.for="row of router.navigation | routeMenuFilter:'root'" class="${row.isActive ? 'active' : ''}">			
+					<a href.bind="row.href">
+						<i if.bind="row.settings.iconClass" class="fa fa-fw ${row.settings.iconClass}"></i> 
+						${row.title}
+					</a>
+				</li>									                    
+			</ul>
+		</div>
+	</nav>	
+	
+</template>

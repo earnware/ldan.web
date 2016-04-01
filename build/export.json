@@ -1,0 +1,14 @@
+{
+  "list": [
+    "index.html",
+    "config.js",
+	"dist/app-build-*.js",
+    "favicon.ico",
+    "jspm_packages/system.js",
+	"jspm_packages/github/twbs/bootstrap@3.3.6/css/*",
+	"jspm_packages/npm/font-awesome@4.5.0/css/*",
+    "jspm_packages/npm/font-awesome@4.5.0/fonts/*",
+    "LICENSE",	
+    "src/assets/styles/*"	
+  ]
+}

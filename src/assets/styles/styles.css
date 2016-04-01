@@ -1,0 +1,75 @@
+.form-horizontal {
+	padding: 15px;
+}
+
+.aurelia-validation-message{
+  display:  inline;
+  margin-left : 5px;
+}
+
+h1.login-logo {
+	font-family: 'Antic Slab', serif;	
+	font-size: 3em;
+	color: white;
+}
+
+i.login-logo {
+	animation: fa-spin 10s infinite linear;
+	color: white;
+	font-size: .85em;
+}
+
+h1.admin-logo {
+	font-family: 'Antic Slab', serif;	
+	font-size: 1.5em;
+	color: white;
+	margin: 0;
+}
+
+i.admin-logo {
+	font-size: .85em;
+	animation: fa-spin 10s infinite linear;
+	margin: 0;
+}
+
+.page-header {
+	margin-top: 5px;
+}
+
+.chart-container {
+	padding: 0px;
+	margin: 15px;
+}
+
+.processing-message {
+	font-family: 'Antic Slab', serif;
+	font-size: 1.5em;
+	color: white;
+}
+
+.processing-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -82px;
+	margin-top: -53px;
+	z-index: 1000;
+}
+
+.overlay-background {
+    background-color: #000;
+    bottom: 0;
+    xdisplay: none;
+    left: 0;
+    opacity: 0.8;
+    filter: alpha(opacity = 80); /* IE7 & 8 */
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+
+i.processing-icon {
+	color: white;
+	font-size: .85em;
+}

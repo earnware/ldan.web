@@ -1,0 +1,12 @@
+<template>
+	<div class="overlay-background" if.bind="processing"/>
+	<div class="processing-container" if.bind="processing">
+		<div class="centered processing-block">
+			<h1 class="text-center login-logo">
+				<span>ldan.io</span> 
+				<i class="processing-icon fa fa-refresh fa-spin"></i>
+			</h1>
+			<div class="processing-message text-center">Processing...</div>
+		</div>
+	</div>	
+</template>

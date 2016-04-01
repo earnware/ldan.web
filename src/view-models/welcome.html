@@ -1,0 +1,106 @@
+<template>
+    <require from="bootstrap/css/bootstrap.css"></require>
+	<require from="bootstrap-social/bootstrap-social.css"></require>
+    <require from="font-awesome/css/font-awesome.css"></require>
+	<require from="../assets/styles/sb-admin.css"></require>
+	<require from="../assets/styles/styles.css"></require>
+	<require from="../elements/processing"></require>	
+
+	<processing processing.bind="processing"></processing>
+	
+	<div class="container centered">
+		<h1 class="text-center login-logo"><span>ldan.io</span> <i class="login-logo fa fa-cog fa-spin"></i></h1>
+		<div class="panel panel-default col-md-4 col-md-offset-4">
+			<div class="panel-body">
+				<div>
+					<fieldset>
+						<legend>Sign In</legend>
+						<button click.trigger="triggerRemoteSignInRequest('facebook')" class="btn btn-small btn-block btn-social btn-facebook">
+							<span class="fa fa-facebook" aria-hidden="true"></span> Sign in with Facebook
+						</button>				
+						<button click.trigger="triggerRemoteSignInRequest('google')" type="button" class="btn btn-small btn-block btn-social btn-google">
+							<span class="fa fa-google-plus" aria-hidden="true"></span> Sign in with Google
+						</button>
+						<hr/>						
+					</fieldset>					
+				</div>		
+
+			</div>
+		</div>
+	</div>
+
+	<!-- uncomment if you want to support native authentication -->
+	<!--<div class="container centered">
+		<h1>LDAN</h1>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="col-sm-4">
+					<fieldset>
+						<legend>Sign in</legend>
+						<button click.trigger="triggerRemoteSignInRequest('facebook')" class="btn btn-small btn-block btn-social btn-facebook">
+							<span class="fa fa-facebook" aria-hidden="true"></span> Sign in with Facebook
+						</button>				
+						<button click.trigger="triggerRemoteSignInRequest('google')" type="button" class="btn btn-small btn-block btn-social btn-google">
+							<span class="fa fa-google-plus" aria-hidden="true"></span> Sign in with Google
+						</button>								
+						
+						<hr/>
+						
+						<form submit.delegate="signIn()" validate.bind="signInValidation">
+							<div class="form-group">
+								<label>Email</label>
+								<input type="email" class="form-control input-sm" id="lEmail" placeholder="Email" value.bind="lEmail">
+							</div>
+							<div class="form-group">
+								<label>Password</label>
+								<input type="password" class="form-control input-sm" id="lPassword" placeholder="Password" value.bind="lPassword">
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox"> Remember me
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary pull-right" disabled.bind="signInValidation.isValidating">Sign in</button>
+							</div>
+						</form>
+					</fieldset>
+				</div>		
+
+				<div class="col-sm-8">
+					<fieldset>
+						<legend>Register</legend>				
+						<form role="form" submit.delegate="register()" validate.bind="registrationValidation">
+								<div class="form-group">
+									<label>First Name</label>
+									<input type="text" class="form-control" id="rFirstName" placeholder="First name" value.bind="rFirstName">
+								</div>				
+								<div class="form-group">
+									<label>Last Name</label>
+									<input type="text" class="form-control" id="rLastName" placeholder="Last name" value.bind="rLastName">
+								</div>										
+								<div class="form-group">
+									<label>Email Address</label>
+									<input type="email" class="form-control" id="rEmail" placeholder="Email" value.bind="rEmail">
+								</div>
+								<div class="form-group">
+									<label>Password</label>
+									<input type="password" class="form-control" id="rPassword" placeholder="Password" value.bind="rPassword">
+								</div>
+								<div class="form-group">
+									<label>Confirm Password</label>
+									<input type="password" class="form-control" id="rPasswordConfirmation" placeholder="Re-enter Password" value.bind="rPasswordConfirmation">
+								</div>					
+								<div class="form-group">
+									<button type="submit" class="btn btn-primary pull-right" disabled.bind="registrationValidation.isValidating">Register</button>									
+								</div>
+						</form>		
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</div>-->
+</template>
+

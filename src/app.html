@@ -1,0 +1,16 @@
+<template>
+    <require from="bootstrap/css/bootstrap.css"></require>
+    <require from="font-awesome/css/font-awesome.css"></require>
+	<require from="assets/styles/sb-admin.css"></require>
+	<require from="assets/styles/styles.css"></require>
+    <require from="elements/nav-bar"></require>
+
+	<div id="wrapper">
+    	<nav-bar router.bind="router"></nav-bar>
+		<div id="page-wrapper">
+			<div class="container-fluid">
+				<router-view></router-view>		
+			</div>
+		</div>
+	</div>
+</template>
