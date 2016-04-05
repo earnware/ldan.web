@@ -5,6 +5,10 @@
   "author": "Keith Garcia",
   "license": "UNLICENSED",
   "homepage": "http://ldan.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/earnware/ldan.web.git"
+  },  
   "scripts": {
     "test": "gulp test",
     "e2e": "gulp serve webdriver-standalone e2e"
