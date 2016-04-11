@@ -76,7 +76,10 @@ export class HelloJsStateChainLink extends Chain {
 										return context;
 									});
 							});						
-					});
+					}, function(reason){
+						console.log(reason);
+						return context;
+ 					});
 			}	
 		}
 		
